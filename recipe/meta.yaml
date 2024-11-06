@@ -1,13 +1,13 @@
 {% set name = "sphinx-markdown-builder" %}
-{% set version = "0.6.6" %}
+{% set version = "0.6.7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/sphinx-markdown-builder-{{ version }}.tar.gz
-  sha256: febd8e03e20e357e624c52efdc7ef9d5ab70d58549784158033c9657d040f44e
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 9623c8d5963e18b3733ec8335a48b58c3e556a96529b73e4c65113cabd8e8591
 
 build:
   noarch: python
