@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sphinx-markdown-builder-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/sphinx_markdown_builder-{{ version }}.tar.gz
   sha256: 6141b566bf18dd1cd515a0a90efd91c6c4d10fc638554fab2fd19cba66543dd7
 
 build:
