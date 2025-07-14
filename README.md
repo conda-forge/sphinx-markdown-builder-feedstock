@@ -145,5 +145,6 @@ Feedstock Maintainers
 
 * [@LucasRochaAbraao](https://github.com/LucasRochaAbraao/)
 * [@igortg](https://github.com/igortg/)
+* [@jan-janssen](https://github.com/jan-janssen/)
 * [@raispbizerra](https://github.com/raispbizerra/)
 
