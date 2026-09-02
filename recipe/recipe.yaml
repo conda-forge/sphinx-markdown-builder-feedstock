@@ -1,0 +1,53 @@
+schema_version: 1
+
+context:
+  name: sphinx-markdown-builder
+  version: "0.6.11"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/sphinx_markdown_builder-${{ version }}.tar.gz
+  sha256: ba3bf33e0e42ff30ae686ac73957a95e6d045790dcfbaca012dd8ae01794e577
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools >=61.0.0
+    - wheel
+    - poetry-core
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - sphinx >=5.1.0
+    - tabulate
+    - docutils
+
+tests:
+  - python:
+      imports:
+        - sphinx_markdown_builder
+      pip_check: true
+      python_version:
+        - ${{ python_min }}
+        - "*"
+
+about:
+  summary: A Sphinx extension to add markdown generation support.
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/liran-funaro/sphinx-markdown-builder
+
+extra:
+  recipe-maintainers:
+    - raispbizerra
+    - igortg
+    - LucasRochaAbraao
+    - jan-janssen
